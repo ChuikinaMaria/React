@@ -27,7 +27,7 @@ test('The component App uses and renders with other props', async () => {
 
 
 test('Given a new prop the app renders with a description', async () => {
-    const { getByTestId } = render(<App title="My App" />);
+    const { getByTestId } = render(<App addDescription={true} />);
 
     const element = await getByTestId('description');
 
@@ -116,7 +116,10 @@ test('Passing functions as props ', async () => {
         calculateReadingLength: (text) => {
             const wordsPerMinute = 200;
             const words = text.split(' ').length;
-            return Math.ceil(words / wordsPerMinute);
+            let time = Math.ceil(words / wordsPerMinute);
+            if (time === 1) {
+                return (time + ' minute')
+            } else { return (time + ' minutes')};
         }
     };
 
@@ -159,7 +162,10 @@ test('Passing functions as props: part 2', async () => {
         calculateReadingLength: (text) => {
             const wordsPerMinute = 200;
             const words = text.split(' ').length;
-            return Math.ceil(words / wordsPerMinute);
+            let time = Math.ceil(words / wordsPerMinute);
+            if (time === 1) {
+                return (time + ' minute')
+            } else { return (time + ' minutes')};
         }
     };
 

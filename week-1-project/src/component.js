@@ -22,4 +22,22 @@ function NewsArticle() {
     )
 }
 
-export { App };
+function MyApp() {
+    const text = "My First React App";
+    
+    return (
+        <div>
+        <p>{text}</p>
+        <TwoHundredArticles />
+        </div>
+    )
+};
+
+function TwoHundredArticles() {
+    let Articles = [];
+    for (let i = 0; i<200; i++) {
+        Articles.push(<NewsArticle key = {i}/> );
+    }
+    return Articles;
+}
+export { App, MyApp };

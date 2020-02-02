@@ -5,20 +5,20 @@ function App(props) {
         <section id="app">
             <h1 data-testid="title">{props.title}</h1>
             {props.addDescription === true ? <p data-testid="description">This is a description of my app</p> : null}
-            {props.articles ? props.articles.map(article => <NewsArticle />) : null}
+            {props.articles ? props.articles.map(article => <NewsArticle ArtTitle = {article.title} text = {article.text} />) : null}
             {props.articles ? (
                 <p data-testid="reading-length">
-                    Reading all article will take you {props.calculateReadingLength && props.calculateReadingLength(props.articles.reduce((accumulator, article) => accumulator + article.text , ''))} minutes
+                    Reading all article will take you {props.calculateReadingLength && props.calculateReadingLength(props.articles.reduce((accumulator, article) => accumulator + article.text , ''))}
                 </p>
             ): null}
         </section>
     );
 }
 
-function NewsArticle() {
+function NewsArticle(props) {
     return (
         <article data-testid="news-article">
-            <h1>Article</h1>
+            <h1>{props.ArtTitle}</h1>
         </article>
     );
 }
