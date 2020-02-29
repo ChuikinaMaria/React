@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Ex1 from './Ex1';
+import Ex2 from './Ex2';
+import Ex3 from './Ex3';
 
 const App = () => {
     return (
@@ -14,17 +16,7 @@ const App = () => {
                 <h3>Exercise 3</h3>
                 <Ex3/>
                 <h3>Exercise 4</h3>
-                <Ex4/>
-                <h3>Exercise 5</h3>
-                <Ex5/>
-                <h3>Exercise 6</h3>
-                <Ex6/>
-                <h3>Exercise 7</h3>
-                <Ex7/>
-                <h3>Exercise 8</h3>
-                <Ex8/>
-                <h3>Exercise 9</h3>
-                <Ex9/>
+               
 
         </section>
     )

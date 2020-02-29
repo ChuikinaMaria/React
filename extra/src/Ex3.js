@@ -4,11 +4,11 @@ const Ex3 = ()=>{
     const [count, setCount] = useState(0);
 
     let p = count;
-    if (p%15===0) {
+    if (p!==0 && p%15===0) {
         p = "FizzBuzz"
-    } else if (p%5===0) {
+    } else if (p!==0 && p%5===0) {
         p = "Buzz"
-    } else if (p%3===0) {
+    } else if (p!==0 && p%3===0) {
         p = "Fizz"
     };
     
