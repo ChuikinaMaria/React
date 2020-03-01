@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import Ex1 from './Ex1';
 import Ex2 from './Ex2';
 import Ex3 from './Ex3';
+import Ex4 from './Ex4';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <h3>Exercise 3</h3>
                 <Ex3/>
                 <h3>Exercise 4</h3>
+                <Ex4/>
                
 
         </section>
