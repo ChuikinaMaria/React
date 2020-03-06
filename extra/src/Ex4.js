@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
 
 const Ex4 = ()=> {
-    let now = Date.toTimeString();
-    const [time, setTime] = useState(now);
+    const getTime=()=>{
+        let now = new Date();
+        let time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+        return time;
+        }    
+
+    const [time, setTime] = useState(getTime());
     return (
         <section>
             <h1>{time}</h1>
             <button onClick={()=>{
-                let now = Date();
-                setTime(now)
+                setTime(getTime())
             }}>Refresh</button>
         </section>
     )
